@@ -1,0 +1,1 @@
+export type Category = "Lebensmittel" | "Haushalt" | "Drogerie" | "Konsum" | "Sonstiges"

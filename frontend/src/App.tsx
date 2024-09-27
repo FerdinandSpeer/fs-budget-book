@@ -1,28 +1,26 @@
+import HomePage from "./pages/HomePage.tsx";
+import {Link, Route, Routes} from "react-router-dom";
+import IncomePage from "./pages/IncomePage.tsx";
+import OutputPage from "./pages/OutputPage.tsx";
+
 function App() {
 
     return (
         <>
             <div className="nav-bar">
                 <ul>
-                    <li>Home</li>
-                    <li>Einnahmen</li>
-                    <li>Ausgaben</li>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link to={"/income"}>Einnahmen</Link></li>
+                    <li><Link to={"/output"}>Ausgaben</Link></li>
 
                 </ul>
             </div>
-            <div className={"total-income"}>
-                <p className={"p-text"}> Einnahmen Gesamt: </p>
-                <p className={"p-value"}> + 3.456 €</p>
-            </div>
-            <div className={"total-output"}>
-                <p className={"p-text"}> Ausgaben Gesamt: </p>
-                <p className={"p-value"}> - 2.456 €</p>
 
-            </div>
-            <div className={"total-summary"}>
-                <p className={"p-text"}> Aktueller Zwischenstand: </p>
-                <p className={"p-value"}> + 1.000 €</p>
-            </div>
+            <Routes>
+                <Route path={"/"} element={<HomePage/>}/>
+                <Route path={"/income"} element={<IncomePage/>}/>
+                <Route path={"/output"} element={<OutputPage/>}/>
+            </Routes>
         </>
     )
 }

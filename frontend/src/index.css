@@ -85,3 +85,18 @@ body {
 .total-output .p-value {
     color: #bf2b2b;
 }
+
+.output-card,
+.income-card{
+    background-color: lightgray;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
